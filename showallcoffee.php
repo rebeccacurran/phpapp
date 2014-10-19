@@ -10,13 +10,6 @@ mysqli_select_db($con,"Coffee");
 $sql="SELECT * FROM coffeeTable";
 $result = mysqli_query($con,$sql);
 
-echo "<table border='1'>
-<tr>
-<th>ID</th>
-<th>Coffee</th>
-<th>Description</th>
-</tr>";
-
 while($row = mysqli_fetch_array($result)) {
   echo "<tr>";
   echo "<td>" . $row['ID'] . "</td>";
@@ -24,8 +17,6 @@ while($row = mysqli_fetch_array($result)) {
   echo "<td>" . $row['CoffeeDesc'] . "</td>";
   echo "</tr>";
 }
-echo "</table>";
-
 mysqli_close($con);
 
 ?>
