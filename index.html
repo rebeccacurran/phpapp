@@ -198,22 +198,21 @@
 
         </tr>
       </thead>
- 
-      <tbody>
 
-<script>  
-$.get("showallcoffee.php", function(data){
-  // alert("Data: " + data);
-  $.html(data);
-});
-</script>
- 
-      </tbody>
- 
       <tbody></tbody>
     </table>
   </div><!-- /container -->
     
+	
+	<script>
+		$( document).ready(function() {
+
+		  $.get( "showallcoffee.php", function( data ) {
+			$('table').append(data);
+		  	
+		  })
+		});
+		</script>
 
 <script>
 function showCoffee(str)
